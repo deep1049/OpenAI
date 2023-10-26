@@ -1,7 +1,7 @@
 const express = require("express");
 require("dotenv").config();
 
-const Key = process.env.KEY;
+const Key = process.env.OPENAI_API_KEY;
 const OpenAI = require("openai");
 const openai = new OpenAI({
   apiKey: Key,
