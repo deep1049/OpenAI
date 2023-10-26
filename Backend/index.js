@@ -13,7 +13,7 @@ app.use("/basic", Router);
 
 app.get("/", (req, res) => res.send("Hello"));
 
-const port = process.env.port;
+const port = process.env.PORT;
 app.listen(port, () => {
   console.log(`Server running at http://localhost:${port}`);
 });
