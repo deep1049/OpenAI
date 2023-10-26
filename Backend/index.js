@@ -11,6 +11,8 @@ app.use(bodyParser.json());
 app.use(cors());
 app.use("/basic", Router);
 
+app.get("/", (req, res) => res.send("Hello"));
+
 const port = process.env.port;
 app.listen(port, () => {
   console.log(`Server running at http://localhost:${port}`);
