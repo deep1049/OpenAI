@@ -40,7 +40,7 @@ const Pincode = () => {
   // },[response])
   console.log("resp", response);
   return (
-    <Box w={800} margin={"auto"}>
+    <Box p={4} w={800} margin={"auto"} border={"1px solid black"} mt={50}>
       <Heading>Pincode Generator</Heading>
       <form onSubmit={handleSubmit}>
         <FormLabel>

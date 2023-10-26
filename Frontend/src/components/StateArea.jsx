@@ -38,7 +38,7 @@ const StateArea = () => {
 
   // },[response])
   return (
-    <Box w={800} margin={"auto"}>
+    <Box p={4} w={800} margin={"auto"} border={"1px solid black"} mt={50}>
       <Heading>State Area Info</Heading>
       <form onSubmit={handleSubmit}>
         <FormLabel>

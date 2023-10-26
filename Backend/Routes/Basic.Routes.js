@@ -29,6 +29,28 @@ Router.post("/", async (req, res) => {
     res.status(500).json({ error: "An error occurred" });
   }
 });
+Router.post("/code", async (req, res) => {
+  try {
+    const { prompt, language } = req.body;
+    const messages = [
+      { role: "system", content: "You are a code converter" },
+      { role: "user", content: `convert ${prompt} in ${language}` },
+    ];
+    const response = await openai.chat.completions.create({
+      model: "gpt-3.5-turbo",
+      messages: messages,
+      temperature: 0,
+      max_tokens: 200,
+      // frequency_penalty: 0,
+      // presence_penalty: 0,
+    });
+    const result = response.choices[0];
+    res.send({ result });
+  } catch (error) {
+    console.error("Error:", error);
+    res.status(500).json({ error: "An error occurred" });
+  }
+});
 Router.post("/pincode", async (req, res) => {
   try {
     const userMessage = req.body.message;
