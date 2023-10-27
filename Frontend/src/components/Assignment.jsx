@@ -60,7 +60,7 @@ const Assignment = () => {
 
   return (
     <Box p={4} w={800} margin={"auto"} border={"1px solid black"}>
-      <Heading>Integrating ChatS GPT to APP</Heading>
+      <Heading>Integrating Chat GPT to APP</Heading>
       <FormControl>
         <FormLabel>Category</FormLabel>
         <Select
